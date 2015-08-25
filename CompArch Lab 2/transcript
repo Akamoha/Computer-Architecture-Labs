@@ -1,0 +1,470 @@
+# Reading C:/altera/12.0/modelsim_ase/tcl/vsim/pref.tcl 
+# Loading project lab2
+#  
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of sExt.v failed with 1 errors.
+# Compile of sExt.v was successful.
+vsim -voptargs=+acc work.sExt
+# vsim -voptargs=+acc work.sExt 
+# Loading work.sExt
+force -freeze sim:/sExt/in 1000 0
+run
+add wave sim:/sExt/*
+run
+force -freeze sim:/sExt/in 0001 0
+run
+quit -sim
+# Compile of adder.v was successful.
+vsim -voptargs=+acc work.adder
+# vsim -voptargs=+acc work.adder 
+# Loading work.adder
+add wave sim:/adder/*
+force -freeze sim:/adder/q1 1 0
+force -freeze sim:/adder/q0 0 0
+force -freeze sim:/adder/A 0000 0
+force -freeze sim:/adder/multiplicand 0111 0
+run
+force -freeze sim:/adder/q1 0 0
+run
+quit -si9m
+# unknown switch: -si9m
+quitsim
+# invalid command name "quitsim"
+quit-sim
+# invalid command name "quit-sim"
+quit -s
+# unknown switch: -s
+quit -sim
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v failed with 1 errors.
+# Compile of counter.v was successful.
+vsim -voptargs=+acc work.counter
+# vsim -voptargs=+acc work.counter 
+# Loading work.counter
+# Loading work.D_ff_cnt
+add wave sim:/counter/*
+force -freeze sim:/counter/clk 1 0
+force -freeze sim:/counter/load 1 0
+run
+force -freeze sim:/counter/clk 0 0
+run
+force -freeze sim:/counter/load 0 0
+force -freeze sim:/counter/clk 1 0
+run
+force -freeze sim:/counter/clk 0 0
+run
+force -freeze sim:/counter/clk 1 0
+run
+force -freeze sim:/counter/clk 0 0
+run
+quit -sim
+# Compile of testMulAddSub.v was successful.
+# Compile of counter.v was successful.
+# Compile of alu.v was successful.
+vsim -voptargs=+acc work.alu
+# vsim -voptargs=+acc work.alu 
+# Loading work.alu
+add wave sim:/alu/*
+force -freeze sim:/alu/cnt 0 0
+force -freeze sim:/alu/select 1 0
+force -freeze sim:/alu/in1 00000001 0
+force -freeze sim:/alu/in2 00000101 0
+run
+run
+run
+force -freeze sim:/alu/cnt 1 0
+run
+run
+force -freeze sim:/alu/cnt 0 0
+run
+force -freeze sim:/alu/in1 00000000 0
+force -freeze sim:/alu/in2 00000001 0
+run
+quit -sim
+# Compile of alu.v was successful.
+vsim -voptargs=+acc work.alu
+# vsim -voptargs=+acc work.alu 
+# Loading work.alu
+add wave sim:/alu/*
+force -freeze sim:/alu/cnt 000 0
+force -freeze sim:/alu/in1 00000001 0
+force -freeze sim:/alu/in2 00000101 0
+run
+force -freeze sim:/alu/select 0 0
+force -freeze sim:/alu/select 1 0
+run
+run
+force -freeze sim:/alu/cnt 001 0
+run
+noforce sim:/alu/cnt
+force -freeze sim:/alu/cnt 000 0
+run
+quit -sim
+# Compile of alu.v was successful.
+vsim -voptargs=+acc work.alu
+# vsim -voptargs=+acc work.alu 
+# Loading work.alu
+add wave sim:/alu/*
+add wave sim:/alu/*
+force -freeze sim:/alu/select 1 0
+force -freeze sim:/alu/cnt 000 0
+force -freeze sim:/alu/in1 00000001 0
+force -freeze sim:/alu/in2 00000101 0
+run
+run
+quit -sim
+# Compile of mulAddSub.v failed with 1 errors.
+# Compile of mulAddSub.v failed with 1 errors.
+# Compile of mulAddSub.v failed with 1 errors.
+# Compile of mulAddSub.v failed with 1 errors.
+# Compile of mulAddSub.v failed with 1 errors.
+# Compile of mulAddSub.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.adder
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+run
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.adder
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+run
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+run
+run
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.adder
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+run
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+run
+add wave sim:/testMulAddSub/*
+quit -sim
+vsim work.mulAddSub
+# vsim work.mulAddSub 
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.adder
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave -r /*
+run
+run
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave -r /*
+run
+run
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+quit -sim
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+quit -sim
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+run
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+run
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
+quit -sim
+# Compile of D_ff_Shifter.v was successful.
+# Compile of D_ff_cnt.v was successful.
+# Compile of counter.v was successful.
+# Compile of rShiftReg.v was successful.
+# Compile of adder.v was successful.
+# Compile of sExt.v was successful.
+# Compile of alu.v was successful.
+# Compile of mulAddSub.v was successful.
+# Compile of testMulAddSub.v was successful.
+# 9 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.testMulAddSub
+# vsim -voptargs=+acc work.testMulAddSub 
+# Loading work.testMulAddSub
+# Loading work.mulAddSub
+# Loading work.sExt
+# Loading work.rShiftReg
+# Loading work.D_ff_Shifter
+# Loading work.adder
+# Loading work.counter
+# Loading work.D_ff_cnt
+# Loading work.alu
+add wave sim:/testMulAddSub/*
+run
+# ** Note: $finish    : C:/Users/Student/Desktop/testMulAddSub.v(52)
+#    Time: 210 ps  Iteration: 0  Instance: /testMulAddSub
+# 1
+# Break in Module testMulAddSub at C:/Users/Student/Desktop/testMulAddSub.v line 52
