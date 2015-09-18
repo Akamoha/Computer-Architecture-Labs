@@ -1,2 +1,2 @@
-Circuit for muladd/mulsub instruction was to be implemented in Verilog using ModelSim.
+The following architecture was to be implemented:
 ![alt tag](http://i.imgur.com/76rhuW5.png)
